@@ -1,5 +1,5 @@
 pandas
 numpy
-ipywidgets
+ipywidgets==8.0
 voila
 plotly
