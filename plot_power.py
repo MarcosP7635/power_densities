@@ -5,7 +5,7 @@ import time
 import plotly.express as px
 import plotly.graph_objects as go
 '''
-Please select the isotope(s) you wish to plot. 
+Please choose the isotope(s) you wish to plot. 
 '''
 high_res_time_series_df = pd.read_csv(
     "Corrected_power_time_series_201_steps.csv",
@@ -42,6 +42,6 @@ def plot(isotopes):
             font=dict(family="Arial, monospace", size=16, color="White"))
     return fig
 
-isotopes = st.multiselect("Select here", entries)
+isotopes = st.multiselect("Select or type their names here", entries)
 st.plotly_chart(plot(isotopes))#, use_container_width=True)
 
