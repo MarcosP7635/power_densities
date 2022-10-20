@@ -47,4 +47,5 @@ def plot(isotopes):
 
 isotopes = st.multiselect("Select or type their names here", entries)
 st.plotly_chart(plot(isotopes))#, use_container_width=True)
+st.write("[Source code for this website](https://github.com/MarcosP7635/power_densities/blob/main/plot_power.py")
 
