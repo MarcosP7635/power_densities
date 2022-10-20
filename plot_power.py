@@ -4,9 +4,10 @@ import pandas as pd
 import time
 import plotly.express as px
 import plotly.graph_objects as go
-'''
-Please choose the isotope(s) you wish to plot. 
-'''
+
+st.title("Interactive Web Application to Plot the Power Produced by Over 2,400 different Isotopes")
+st.header("by Marcos Perez: github.com/MarcosP7635")
+st.subheader("Please choose the isotope(s) you wish to plot.")
 high_res_time_series_df = pd.read_csv(
     "Corrected_power_time_series_201_steps.csv",
     on_bad_lines = 'warn')
