@@ -4,12 +4,12 @@ import pandas as pd
 import time
 import plotly.express as px
 import plotly.graph_objects as go
-print()
-st.title("Interactive Web Application for Energy Applications of Isotopes")
+
+st.title("Interactive Web Application to Plot the Power Produced by Different Isotopes")
 st.header("by [Marcos Perez](https://github.com/MarcosP7635)")
-energy_fig = go.Figure()
-energies_df = pd.read_csv("energies.csv").iloc[:,1:]
-st.plotly_chart(energy_fig)
+high_res_time_series_df = pd.read_csv(
+    "Corrected_power_time_series_201_steps.csv",
+    on_bad_lines = 'warn')
 st.subheader("This includes time series from " + str(high_res_time_series_df.shape[0])
 + " different isotopes")
 st.subheader("Please choose the isotope(s) you wish to plot.")
